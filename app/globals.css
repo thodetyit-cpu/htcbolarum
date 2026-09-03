@@ -10,3 +10,8 @@
 
 /* Admin registration matrix event counts */
 .eventHeaderCount{font-weight:900;color:var(--green);white-space:nowrap}
+
+/* Public participant name search */
+.participantSearchBar{display:flex;width:100%;margin:0 0 14px}
+.participantSearchBar input{width:100%;max-width:420px;border:1px solid var(--line);border-radius:10px;padding:11px 14px;font:inherit;color:var(--navy);background:#fff;outline:none}
+.participantSearchBar input:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(0,0,0,.06)}
