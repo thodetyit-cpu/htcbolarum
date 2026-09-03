@@ -15,3 +15,50 @@
 .participantSearchBar{display:flex;width:100%;margin:0 0 14px}
 .participantSearchBar input{width:100%;max-width:420px;border:1px solid var(--line);border-radius:10px;padding:11px 14px;font:inherit;color:var(--navy);background:#fff;outline:none}
 .participantSearchBar input:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(0,0,0,.06)}
+
+/* Registration page redesign */
+.registrationTopPanel{margin-bottom:20px}
+.registrationTopHeading{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.registrationTopHeading h2,.participantsHeading h2{margin-bottom:4px}
+.registrationTopHeading p,.participantsHeading p{margin:0}
+.registrationForm{display:grid;grid-template-columns:360px 1fr auto;gap:22px;align-items:end}
+.registrationFields{display:grid;grid-template-columns:1fr;gap:14px}
+.registrationEventsBlock{min-width:0}
+.registrationEventsBlock .formSubhead{font:700 15px Arial,sans-serif;color:var(--navy);margin:0 0 9px}
+.eventChoices{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:9px;margin:0}
+.eventChoice{position:relative;display:flex;align-items:flex-start;gap:7px;padding:10px 8px;min-height:116px;border:1px solid var(--line);border-radius:10px;background:#fff;cursor:pointer;transition:.15s ease}
+.eventChoice:hover{transform:translateY(-1px);box-shadow:0 3px 10px rgba(0,0,0,.06)}
+.eventChoice input{position:absolute;top:8px;left:8px;margin:0;width:15px;height:15px;z-index:2}
+.eventChoiceContent{display:flex!important;align-items:center;justify-content:flex-end;flex-direction:column;gap:3px;width:100%;padding-top:2px;text-align:center}
+.eventChoiceContent strong{font-size:13px;line-height:1.15}
+.eventChoiceContent small{font-size:10px;line-height:1.25;color:var(--muted)}
+.eventIcon{font-size:25px;line-height:1;margin-bottom:2px}
+.eventChoice.checked{border-color:var(--gold);box-shadow:0 0 0 2px rgba(199,164,90,.18)}
+.fieldHint{display:block;margin-top:4px;color:var(--muted);font-size:11px}
+.registrationSubmit{display:flex;align-items:flex-end}
+.registrationSubmit .btn{white-space:nowrap;min-height:46px;padding-left:20px;padding-right:20px}
+.participantsHeading{margin-bottom:14px}
+@media(max-width:1050px){
+  .registrationForm{grid-template-columns:280px 1fr}
+  .registrationSubmit{grid-column:1 / -1}
+  .registrationSubmit .btn{width:auto}
+}
+@media(max-width:850px){
+  .registerWrap{padding:20px 14px 50px}
+  .registerTop{margin-bottom:18px}
+  .registrationForm{grid-template-columns:1fr;gap:18px}
+  .registrationFields{grid-template-columns:1fr 1fr}
+  .registrationSubmit{grid-column:auto}
+  .registrationSubmit .btn{width:100%}
+  .eventChoices{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .eventChoice{min-height:112px;padding:9px 7px}
+  .eventIcon{font-size:23px}
+  .eventChoiceContent strong{font-size:12px}
+  .eventChoiceContent small{font-size:9px}
+}
+@media(max-width:520px){
+  .registrationFields{grid-template-columns:1fr}
+  .registrationTopHeading{margin-bottom:14px}
+  .eventChoice{min-height:108px}
+  .participantSearchBar input{max-width:none}
+}
