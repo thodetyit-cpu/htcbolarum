@@ -8,6 +8,19 @@ type EventOption={id:string;name:string;category:string;date:string|null;time:st
 type Registration={registration_group_id:string;participant_name:string;event_name:string;registered_at:string}
 type Participant={id:string;name:string;registeredAt:string;events:Set<string>}
 
+function eventIcon(name:string){
+  const n=name.toLowerCase()
+  if(n.includes('volley')) return '🏐'
+  if(n.includes('throw')) return '🏐'
+  if(n.includes('cricket')) return '🏏'
+  if(n.includes('football')) return '⚽'
+  if(n.includes('sing')) return '🎤'
+  if(n.includes('musical') || n.includes('chair')) return '🪑'
+  if(n.includes('bible')) return '📖'
+  if(n.includes('chess')) return '♟'
+  return '★'
+}
+
 export default function RegisterPage(){
   const [events,setEvents]=useState<EventOption[]>([])
   const [selected,setSelected]=useState<string[]>([])
@@ -72,49 +85,78 @@ export default function RegisterPage(){
     <div className="registerWrap">
       <div className="registerTop"><Link className="link" href="/">← Back to website</Link></div>
       <div className="sectionHead"><div><h1>Event Registration</h1><p>Select all competitions you want to participate in. Enter your name and phone number once.</p></div></div>
-      <div className="registerGrid">
-        <section className="panel">
-          <h2>Register to Participate</h2>
-          {error&&<div className="error">{error}</div>}
-          {message&&<div className="notice">{message}</div>}
-          <form onSubmit={submit}>
-            <div className="formGrid">
-              <div className="field full"><label>Name</label><input value={name} onChange={e=>setName(e.target.value)} required maxLength={100} placeholder="Your full name"/></div>
-              <div className="field full"><label>Phone number</label><input type="tel" value={phone} onChange={e=>setPhone(e.target.value)} required maxLength={25} placeholder="Your phone number"/></div>
+      <section className="panel registrationTopPanel">
+        <div className="registrationTopHeading">
+          <div>
+            <h2>Register to Participate</h2>
+            <p className="small">Enter your details and select all competitions you want to participate in.</p>
+          </div>
+        </div>
+
+        {error&&<div className="error">{error}</div>}
+        {message&&<div className="notice">{message}</div>}
+
+        <form onSubmit={submit} className="registrationForm">
+          <div className="registrationFields">
+            <div className="field">
+              <label>Name</label>
+              <input value={name} onChange={e=>setName(e.target.value)} required maxLength={100} placeholder="Your full name"/>
             </div>
+            <div className="field">
+              <label>Phone number</label>
+              <input type="tel" value={phone} onChange={e=>setPhone(e.target.value)} required maxLength={25} placeholder="Your phone number"/>
+              <small className="fieldHint">We will not share your number.</small>
+            </div>
+          </div>
+
+          <div className="registrationEventsBlock">
             <h3 className="formSubhead">Select events</h3>
             <div className="eventChoices">
               {loading?<div className="small">Loading events…</div>:events.map(event=><label className={`eventChoice ${selected.includes(event.id)?'checked':''}`} key={event.id}>
                 <input type="checkbox" checked={selected.includes(event.id)} onChange={()=>toggle(event.id)}/>
-                <span><strong>{event.name}</strong><small>{event.category}{event.date?` · ${event.date}`:''}{event.time?` · ${event.time}`:''}</small></span>
+                <span className="eventChoiceContent">
+                  <span className="eventIcon" aria-hidden="true">{eventIcon(event.name)}</span>
+                  <strong>{event.name}</strong>
+                  <small>{event.date?event.date:''}{event.time?` · ${event.time}`:''}</small>
+                </span>
               </label>)}
             </div>
-            <button className="btn primary" type="submit" disabled={submitting||loading||events.length===0}>{submitting?'Submitting…':'Register for selected events'}</button>
-          </form>
-        </section>
+          </div>
 
-        <section className="panel participantsPanel">
-          <h2>Registered Participants</h2>
-          <p className="small">Names and registered events are shown below. Contact numbers are private and visible only to organizers.</p>
-          {loading?<div className="empty">Loading participants…</div>:participants.length?<>
-            <div className="participantSearchBar">
-              <input
-                type="search"
-                value={participantSearch}
-                onChange={e=>setParticipantSearch(e.target.value)}
-                placeholder="Search participant name..."
-                aria-label="Search participant name"
-              />
-            </div>
-            {filteredParticipants.length?<div className="participantTableWrap">
-              <table className="participantTable">
-                <thead><tr><th>S.no</th><th>Name</th>{events.map(event=><th key={event.id}>{event.name}</th>)}</tr></thead>
-                <tbody>{filteredParticipants.map((p,i)=><tr key={p.id}><td>{i+1}</td><td className="participantName">{p.name}</td>{events.map(event=><td key={event.id} className="eventMark">{p.events.has(event.name)?<strong>Yes</strong>:''}</td>)}</tr>)}</tbody>
-              </table>
-            </div>:<div className="empty">No participants found.</div>}
-          </>:<div className="empty">No registrations yet.</div>}
-        </section>
-      </div>
+          <div className="registrationSubmit">
+            <button className="btn primary" type="submit" disabled={submitting||loading||events.length===0}>
+              {submitting?'Submitting…':'Register for selected events'}
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section className="panel participantsPanel">
+        <div className="participantsHeading">
+          <div>
+            <h2>Registered Participants</h2>
+            <p className="small">Names and registered events are shown below. Contact numbers are private and visible only to organizers.</p>
+          </div>
+        </div>
+
+        {loading?<div className="empty">Loading participants…</div>:participants.length?<>
+          <div className="participantSearchBar">
+            <input
+              type="search"
+              value={participantSearch}
+              onChange={e=>setParticipantSearch(e.target.value)}
+              placeholder="Search participant name..."
+              aria-label="Search participant name"
+            />
+          </div>
+          {filteredParticipants.length?<div className="participantTableWrap">
+            <table className="participantTable">
+              <thead><tr><th>S.no</th><th>Name</th>{events.map(event=><th key={event.id}>{event.name}</th>)}</tr></thead>
+              <tbody>{filteredParticipants.map((p,i)=><tr key={p.id}><td>{i+1}</td><td className="participantName">{p.name}</td>{events.map(event=><td key={event.id} className="eventMark">{p.events.has(event.name)?<strong>Yes</strong>:''}</td>)}</tr>)}</tbody>
+            </table>
+          </div>:<div className="empty">No participants found.</div>}
+        </>:<div className="empty">No registrations yet.</div>}
+      </section>
     </div>
   </main>
 }
