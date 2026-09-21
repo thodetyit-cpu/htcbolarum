@@ -1,3 +1,3 @@
 import './globals.css'
-export const metadata={title:'180th Year Celebration | CSI Holy Trinity Church, Bolarum',description:'Competition details, schedules, rules and coordinators for the 180th Year Celebration of CSI Holy Trinity Church, Bolarum.'}
+export const metadata={title:'CSI Holy Trinity Church, Bolarum',description:'The new website of CSI Holy Trinity Church, Bolarum is coming soon.'}
 export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body>{children}</body></html>}
