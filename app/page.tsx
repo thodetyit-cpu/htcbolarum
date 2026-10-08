@@ -108,16 +108,8 @@ export default function Home() {
             <div className="dateBadge"><strong>11</strong><span>OCT</span></div>
             <div>
               <small>Sunday · 9:30 AM</small>
-              <h3>Combined Service</h3>
-              <p>Join us for the combined English and Telugu service at 9:30 AM, followed by our Harvest Celebration.</p>
-            </div>
-          </article>
-          <article className="dateCard highlight">
-            <div className="dateBadge"><strong>11</strong><span>OCT</span></div>
-            <div>
-              <small>Sunday · Harvest Day</small>
-              <h3>Harvest Celebration</h3>
-              <p>Come together as a congregation to give thanks to God, celebrate His blessings and share the joy of the Harvest.</p>
+              <h3>Combined Worship Service &amp; Harvest Festival</h3>
+              <p>Join us for the Combined Worship Service at 9:30 AM as we celebrate our Harvest Festival together in thanksgiving, worship and fellowship.</p>
             </div>
           </article>
         </div>
