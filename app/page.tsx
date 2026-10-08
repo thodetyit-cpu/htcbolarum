@@ -1,17 +1,37 @@
 export default function Home() {
   const stalls = [
     { no: "01–06", title: "Special Biryani Counter", desc: "The much-awaited Harvest Biryani experience.", tone: "gold" },
-    { no: "07–14", title: "Women’s Fellowship", desc: "Food, treats and fellowship.", tone: "rose" },
-    { no: "15–26", title: "Sunday School", desc: "Creative stalls, food and family fun.", tone: "green" },
-    { no: "27–30", title: "Youth Fellowship", desc: "Games, activities and youthful energy.", tone: "blue" },
-    { no: "31–36", title: "Other Participants", desc: "A variety of community stalls.", tone: "violet" },
+    { no: "07–14", title: "Women’s Fellowship Stalls", desc: "Food, treats and fellowship from the Women’s Fellowship.", tone: "rose" },
+    { no: "15–26", title: "Sunday School Stalls", desc: "Creative stalls, food and family fun.", tone: "green" },
+    { no: "27–30", title: "Youth Fellowship Stalls", desc: "Games, activities and youthful energy.", tone: "blue" },
+    { no: "31–36", title: "Other Participant Stalls", desc: "A variety of community stalls.", tone: "violet" },
   ];
 
   const experiences = [
-    { icon: "🎟️", title: "Tambola / Bingo", text: "Bring your luck, join the numbers and enjoy the excitement together." },
+    { icon: "🎟️", title: "Tambola / Bingo", text: "Pick your tickets, follow the numbers and enjoy the excitement together." },
     { icon: "📸", title: "Photo Booth", text: "Capture a Harvest Festival memory with family and friends." },
     { icon: "🍲", title: "Food Stalls", text: "Discover homemade favourites and festive food from our church community." },
     { icon: "🎨", title: "Arts & Crafts", text: "Explore creative work and handmade treasures from our members." },
+  ];
+
+  const contacts = [
+    { group: "Stalls", name: "Mrs. Salome Bhasker", role: "Pastorate Treasurer", phone: "9848593253", tone: "gold" },
+    { group: "Stalls", name: "Mr. Prashant Kumar Thodety", role: "IT & Media Secretary", phone: "9440530780", tone: "green" },
+    { group: "Women’s Stalls", name: "Mrs. Mary Noel", role: "Women’s Secretary", phone: "8179353921", tone: "rose" },
+    { group: "Sunday School Stalls", name: "Mrs. Feeba Christina", role: "Sunday School Superintendent", phone: "9949586819", tone: "blue" },
+    { group: "Youth Fellowship Stalls", name: "Mr. R. Pradeep", role: "Youth Secretary", phone: "9703455140", tone: "violet" },
+    { group: "Auction of Fruits & Vegetables", name: "Mr. Sunil Kumar Lingala", role: "Pastorate Secretary", phone: "7337448486", tone: "orange" },
+  ];
+
+  const committee = [
+    ["Rev. Dr. John Sunder M", "Presbyter In Charge"],
+    ["Rev. Dr. Jyothi Sunder", "Associate Presbyter"],
+    ["Rev. Kiran", "Presbyter"],
+    ["Mr. Sunil Lingala", "Pastorate Secretary"],
+    ["Dr. Chandrashekar LEJ", "Property Secretary"],
+    ["Mrs. Salome Bhasker", "Pastorate Treasurer"],
+    ["Prof. GS. Gabriel", "Pastorate Steward"],
+    ["Mr. Sam Kubendar", "Church Steward"],
   ];
 
   return (
@@ -26,8 +46,9 @@ export default function Home() {
           <a href="#fun">Games & Fun</a>
           <a href="#auction">Auction</a>
           <a href="#biryani">Biryani</a>
+          <a href="#contact">Contacts</a>
         </nav>
-        <a className="navCta" href="#visit">Plan your visit</a>
+        <a className="navCta" href="#biryani">Get Biryani Coupons</a>
       </header>
 
       <section id="top" className="hero">
@@ -40,8 +61,8 @@ export default function Home() {
           </div>
           <h1>Celebrate the harvest.<br /><em>Share the joy.</em></h1>
           <p className="heroText">
-            A joyful day of thanksgiving, fellowship, food, games, creativity and community
-            at Holy Trinity Church, Bolarum.
+            A joyful celebration of thanksgiving, fellowship, food, games, creativity
+            and community at Holy Trinity Church, Bolarum.
           </p>
           <div className="heroActions">
             <a className="primaryBtn" href="#stalls">Explore the stalls <span>↓</span></a>
@@ -49,8 +70,8 @@ export default function Home() {
           </div>
           <div className="heroFacts">
             <div><strong>36</strong><span>Stalls</span></div>
-            <div><strong>7</strong><span>Tents</span></div>
-            <div><strong>1</strong><span>Church family</span></div>
+            <div><strong>₹200</strong><span>Biryani Coupon</span></div>
+            <div><strong>₹20</strong><span>Tambola Ticket</span></div>
           </div>
         </div>
         <div className="scrollHint">Scroll to explore <span>↓</span></div>
@@ -61,8 +82,8 @@ export default function Home() {
         <h2>More than a festival.<br /><span>A celebration of togetherness.</span></h2>
         <p>
           Come together after worship for an afternoon of food, fellowship and fun.
-          Walk through our covered stall area, meet the teams behind each stall,
-          join the games, take a family photograph and enjoy the special moments of Harvest.
+          Explore the stalls, enjoy the games, capture family memories and celebrate
+          the abundance of God’s blessings with our church family.
         </p>
       </section>
 
@@ -72,7 +93,7 @@ export default function Home() {
             <div className="sectionKicker">Explore the marketplace</div>
             <h2>36 stalls. <span>Something for everyone.</span></h2>
           </div>
-          <p>Seven covered tents bring the Harvest Celebration together in one easy-to-explore festival space.</p>
+          <p>Explore the Harvest Celebration stalls and meet the teams serving our church community.</p>
         </div>
         <div className="stallGrid">
           {stalls.map((stall) => (
@@ -94,13 +115,19 @@ export default function Home() {
           <div className="bowl">🍚</div>
         </div>
         <div className="biryaniCopy">
-          <div className="sectionKicker light">The one everyone will ask about</div>
+          <div className="sectionKicker light">The special one</div>
           <h2>The <em>Special Biryani</em> Counter</h2>
           <p>
-            A dedicated Harvest favourite, served at the special Biryani Counter.
-            Come hungry, bring your family and make it part of your celebration.
+            Make sure you don't miss our special Harvest Biryani. Only 180 coupons
+            are being sold, on a first-come, first-served basis.
           </p>
-          <div className="counterBadge">STALLS 01–06</div>
+          <div className="couponPrice"><span>₹200</span> per coupon</div>
+          <div className="couponAlert"><strong>ONLY 50 COUPONS LEFT</strong><span>First come • First serve</span></div>
+          <div className="couponContacts">
+            <div><strong>Coupons can be collected from</strong></div>
+            <a href="tel:8801450005">Mr. Ravi Chaitanya <span>· Social Media Secretary</span><b>8801450005</b></a>
+            <a href="tel:9440530780">Mr. Prashant Kumar Thodety <span>· IT & Media Secretary</span><b>9440530780</b></a>
+          </div>
         </div>
       </section>
 
@@ -116,6 +143,23 @@ export default function Home() {
             </article>
           ))}
         </div>
+
+        <div className="tambolaCard">
+          <div>
+            <div className="sectionKicker">Try your luck</div>
+            <h3>Tambola / Bingo</h3>
+            <p>Join the numbers game and make your Harvest Celebration even more exciting.</p>
+          </div>
+          <div className="ticketPrices">
+            <div><strong>₹20</strong><span>Each Ticket</span></div>
+            <div><strong>₹100</strong><span>Full Sheet · 6 Tickets</span></div>
+          </div>
+          <div className="organisedBy">
+            <small>Organised by</small>
+            <strong>Mr. Ravi Kumar Thodety</strong>
+            <span>9849001813</span>
+          </div>
+        </div>
       </section>
 
       <section id="auction" className="auction">
@@ -124,14 +168,47 @@ export default function Home() {
           <div className="sectionKicker light">A Harvest tradition with a twist</div>
           <h2>The Harvest <em>Auction</em></h2>
           <p>
-            The vegetables and produce used to decorate the church become part of a
-            fun-filled auction. Admire the Harvest display inside the church, then
-            take home a piece of the celebration through the auction.
+            The fruits and vegetables used to decorate the church become part of a
+            fun-filled auction. Admire the beautiful Harvest display inside the church,
+            then bid and take home a piece of the celebration.
           </p>
           <div className="auctionTag">BID • LAUGH • TAKE HOME A HARVEST</div>
+          <div className="auctionIncharge">
+            <small>Auction In Charge</small>
+            <strong>Mr. Sunil Kumar Lingala</strong>
+            <span>Pastorate Secretary · 7337448486</span>
+          </div>
         </div>
         <div className="produce" aria-hidden="true">
           <span>🥕</span><span>🌽</span><span>🍅</span><span>🥬</span><span>🎃</span>
+        </div>
+      </section>
+
+      <section id="contact" className="section contactSection">
+        <div className="sectionKicker">Who to contact</div>
+        <h2>Festival <span>incharges.</span></h2>
+        <div className="contactGrid">
+          {contacts.map((person) => (
+            <article className={`contactCard ${person.tone}`} key={person.group}>
+              <small>{person.group}</small>
+              <h3>{person.name}</h3>
+              <p>{person.role}</p>
+              <a href={`tel:${person.phone}`}>Call <b>{person.phone}</b></a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section committeeSection">
+        <div className="sectionKicker">With gratitude and leadership</div>
+        <h2>Organizing <span>Committee.</span></h2>
+        <div className="committeeGrid">
+          {committee.map(([name, role]) => (
+            <div className="committeePerson" key={name}>
+              <span className="personDot">✦</span>
+              <div><strong>{name}</strong><small>{role}</small></div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -140,13 +217,11 @@ export default function Home() {
           <div>
             <div className="sectionKicker">Join us</div>
             <h2>Come for worship.<br /><span>Stay for the celebration.</span></h2>
-            <p>
-              Holy Trinity Church, Bolarum · Hyderabad, Telangana
-            </p>
+            <p>Holy Trinity Church, Bolarum · Hyderabad, Telangana</p>
           </div>
           <div className="visitNote">
             <strong>Harvest Celebration</strong>
-            <span>Details and programme updates will be announced here.</span>
+            <span>Watch this page for programme details, timings and announcements.</span>
           </div>
         </div>
       </section>
