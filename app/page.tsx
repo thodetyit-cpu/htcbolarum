@@ -77,6 +77,62 @@ export default function Home() {
         <div className="scrollHint">Scroll to explore <span>↓</span></div>
       </section>
 
+      <section className="harvestDates section">
+        <div className="sectionKicker">Mark your calendar</div>
+        <h2>Harvest Celebration <span>2026.</span></h2>
+        <div className="dateGrid">
+          <article className="dateCard">
+            <div className="dateBadge"><strong>10</strong><span>OCT</span></div>
+            <div>
+              <small>Saturday · From 4:00 PM onwards</small>
+              <h3>Church Decoration</h3>
+              <p>Come together to decorate the church and prepare our Harvest celebration space with joy and fellowship.</p>
+              <strong className="dateLeaders">Led by Mr. R. Pradeep &amp; Ms. Sharon Grace GS</strong>
+              <span className="dateRoles">Youth Secretary · Social Media Secretary</span>
+            </div>
+          </article>
+          <article className="dateCard highlight">
+            <div className="dateBadge"><strong>11</strong><span>OCT</span></div>
+            <div>
+              <small>Sunday</small>
+              <h3>Harvest Celebration</h3>
+              <p>Join the congregation as we give thanks to God, celebrate His blessings and share the joy of the Harvest together.</p>
+            </div>
+          </article>
+        </div>
+        <div className="decorationInvite">
+          <span>✦</span>
+          <p><strong>Everyone is welcome.</strong> Any member is warmly invited to come and participate in the church decoration for Harvest.</p>
+        </div>
+      </section>
+
+      <section className="titheSection section">
+        <div className="titheInner">
+          <div className="sectionKicker light">A message from the Presbyter In Charge</div>
+          <h2>Let us give with <em>thanksgiving.</em></h2>
+          <p>
+            As we prepare to celebrate the Harvest, let us remember that every blessing we
+            receive comes from the Lord. Our Harvest offering and tithe are an expression
+            of gratitude, worship and trust in God. Let us give willingly, prayerfully and
+            cheerfully, according to the blessings God has entrusted to each of us.
+          </p>
+          <blockquote>
+            “Bring the whole tithe into the storehouse… Test me in this,” says the Lord Almighty.
+            <cite>— Malachi 3:10</cite>
+          </blockquote>
+          <blockquote>
+            “God loves a cheerful giver.”
+            <cite>— 2 Corinthians 9:7</cite>
+          </blockquote>
+          <p className="titheClosing">
+            May our giving become an offering of love to the Lord and a blessing to His
+            Church and to those whom we serve. Let us come together in faith and thanksgiving,
+            giving not out of compulsion, but with joyful hearts.
+          </p>
+          <div className="presbyterSign">Rev. Dr. John Sunder M <span>· Presbyter In Charge</span></div>
+        </div>
+      </section>
+
       <section className="intro section">
         <div className="sectionKicker">A harvest of blessings</div>
         <h2>More than a festival.<br /><span>A celebration of togetherness.</span></h2>
