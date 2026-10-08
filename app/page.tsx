@@ -170,11 +170,11 @@ export default function Home() {
         <div className="biryaniArt" aria-hidden="true">
           <img
             className="biryaniPhoto"
-            src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Biriyani.jpg"
+            src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Chicken_Biryani_from_the_streets_of_Hyderabad.JPG"
             alt=""
           />
           <div className="biryaniPhotoShade" />
-          <div className="biryaniPhotoLabel">Chicken Biryani</div>
+          <div className="biryaniPhotoLabel">Chicken Biryani · Representative Image</div>
         </div>
         <div className="biryaniCopy">
           <div className="sectionKicker light">The special one</div>
