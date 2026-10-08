@@ -1,6 +1,6 @@
 export default function Home() {
   const stalls = [
-    { no: "01–06", title: "Special Biryani Counter", desc: "The much-awaited Chicken Biryani experience.", tone: "gold" },
+    { no: "01–06", title: "Special Chicken Biryani Counter", desc: "The much-awaited Chicken Biryani experience.", tone: "gold" },
     { no: "07–14", title: "Women’s Fellowship Stalls", desc: "Food, treats and fellowship from the Women’s Fellowship.", tone: "rose" },
     { no: "15–26", title: "Sunday School Stalls", desc: "Creative stalls, food and family fun.", tone: "green" },
     { no: "27–30", title: "Youth Fellowship Stalls", desc: "Games, activities and youthful energy.", tone: "blue" },
@@ -174,11 +174,11 @@ export default function Home() {
             alt=""
           />
           <div className="biryaniPhotoShade" />
-          <div className="biryaniPhotoLabel">Harvest Biryani</div>
+          <div className="biryaniPhotoLabel">Chicken Biryani</div>
         </div>
         <div className="biryaniCopy">
           <div className="sectionKicker light">The special one</div>
-          <h2>The <em>Special Biryani</em> Counter</h2>
+          <h2>The <em>Special Chicken Biryani</em> Counter</h2>
           <p>
             Make sure you don't miss our special Chicken Biryani. Only 180 coupons
             are being sold, on a first-come, first-served basis.
