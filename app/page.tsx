@@ -95,21 +95,29 @@ export default function Home() {
               </div>
             </div>
           </article>
-          <article className="dateCard highlight">
-            <div className="dateBadge"><strong>11</strong><span>OCT</span></div>
-            <div>
-              <small>Sunday</small>
-              <h3>Harvest Celebration</h3>
-              <p>Join the congregation as we give thanks to God, celebrate His blessings and share the joy of the Harvest together.</p>
-            </div>
-          </article>
           <article className="dateCard choirCard">
             <div className="dateBadge"><strong>10</strong><span>OCT</span></div>
             <div>
               <small>Saturday · From 6:00 PM onwards</small>
               <h3>Choir Practice</h3>
-              <p>Choir practice for both Telugu and English worship.</p>
-              <div className="choirLanguages"><span>Telugu</span><span>English</span></div>
+              <p>Combined choir practice for both English and Telugu Harvest songs.</p>
+              <div className="choirLanguages"><span>English Songs</span><span>Telugu Songs</span></div>
+            </div>
+          </article>
+          <article className="dateCard highlight">
+            <div className="dateBadge"><strong>11</strong><span>OCT</span></div>
+            <div>
+              <small>Sunday · 9:30 AM</small>
+              <h3>Combined Service</h3>
+              <p>Join us for the combined English and Telugu service at 9:30 AM, followed by our Harvest Celebration.</p>
+            </div>
+          </article>
+          <article className="dateCard highlight">
+            <div className="dateBadge"><strong>11</strong><span>OCT</span></div>
+            <div>
+              <small>Sunday · Harvest Day</small>
+              <h3>Harvest Celebration</h3>
+              <p>Come together as a congregation to give thanks to God, celebrate His blessings and share the joy of the Harvest.</p>
             </div>
           </article>
         </div>
