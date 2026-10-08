@@ -109,10 +109,13 @@ export default function Home() {
 
       <section id="biryani" className="biryani section">
         <div className="biryaniArt" aria-hidden="true">
-          <div className="sun" />
-          <div className="leaf leafOne">✦</div>
-          <div className="leaf leafTwo">✦</div>
-          <div className="bowl">🍚</div>
+          <img
+            className="biryaniPhoto"
+            src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Biriyani.jpg"
+            alt=""
+          />
+          <div className="biryaniPhotoShade" />
+          <div className="biryaniPhotoLabel">Harvest Biryani</div>
         </div>
         <div className="biryaniCopy">
           <div className="sectionKicker light">The special one</div>
@@ -179,8 +182,17 @@ export default function Home() {
             <span>Pastorate Secretary · 7337448486</span>
           </div>
         </div>
-        <div className="produce" aria-hidden="true">
-          <span>🥕</span><span>🌽</span><span>🍅</span><span>🥬</span><span>🎃</span>
+        <div className="produceCounter" aria-hidden="true">
+          <div className="produceImageWrap">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/09/Fruit_and_vegetables_basket.jpg"
+              alt=""
+            />
+          </div>
+          <div className="produceCounterLabel">
+            <strong>Fresh Harvest Produce</strong>
+            <span>Fruits &amp; Vegetables · For Sale &amp; Auction</span>
+          </div>
         </div>
       </section>
 
