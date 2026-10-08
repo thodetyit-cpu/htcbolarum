@@ -44,7 +44,9 @@ footer{background:#0b1d15;color:#fff;padding:30px max(34px,calc((100vw - 1112px)
   .biryani{grid-template-columns:1fr}.biryaniArt{min-height:360px}.biryaniPhotoLabel{left:22px;bottom:22px}.biryaniCopy{padding:60px 28px}
   .experienceGrid{grid-template-columns:1fr 1fr}
   .tambolaCard{grid-template-columns:1fr}.ticketPrices{flex-wrap:wrap}.organisedBy{grid-column:auto}
-  .auctionContent{margin-left:0}.produceCounter{opacity:.5;right:-10%;width:340px}
+  .auction{display:flex;flex-direction:column;align-items:stretch;min-height:0}
+  .auctionContent{margin-left:0;width:100%;padding:75px 22px 30px}
+  .produceCounter{position:relative;right:auto;bottom:auto;width:min(390px,82vw);margin:0 auto 55px;opacity:1;transform:rotate(-2deg)}
   .contactGrid{grid-template-columns:1fr 1fr}.committeeGrid{grid-template-columns:1fr}
   .visitCard{display:block}.visitNote{border-left:0;border-top:1px solid rgba(23,37,29,.18);margin-top:28px;padding:22px 0 0}
 }
