@@ -1,6 +1,6 @@
 export default function Home() {
   const stalls = [
-    { no: "01–06", title: "Special Biryani Counter", desc: "The much-awaited Harvest Biryani experience.", tone: "gold" },
+    { no: "01–06", title: "Special Biryani Counter", desc: "The much-awaited Chicken Biryani experience.", tone: "gold" },
     { no: "07–14", title: "Women’s Fellowship Stalls", desc: "Food, treats and fellowship from the Women’s Fellowship.", tone: "rose" },
     { no: "15–26", title: "Sunday School Stalls", desc: "Creative stalls, food and family fun.", tone: "green" },
     { no: "27–30", title: "Youth Fellowship Stalls", desc: "Games, activities and youthful energy.", tone: "blue" },
@@ -87,8 +87,12 @@ export default function Home() {
               <small>Saturday · From 4:00 PM onwards</small>
               <h3>Church Decoration</h3>
               <p>Come together to decorate the church and prepare our Harvest celebration space with joy and fellowship.</p>
-              <strong className="dateLeaders">Led by Mr. R. Pradeep &amp; Ms. Sharon Grace GS</strong>
-              <span className="dateRoles">Youth Secretary · Social Media Secretary</span>
+              <div className="dateLeaders">
+                <strong>Mr. R. Pradeep</strong>
+                <span>Youth Secretary</span>
+                <strong>Ms. Sharon Grace GS</strong>
+                <span>Social Media Secretary</span>
+              </div>
             </div>
           </article>
           <article className="dateCard highlight">
@@ -97,6 +101,15 @@ export default function Home() {
               <small>Sunday</small>
               <h3>Harvest Celebration</h3>
               <p>Join the congregation as we give thanks to God, celebrate His blessings and share the joy of the Harvest together.</p>
+            </div>
+          </article>
+          <article className="dateCard choirCard">
+            <div className="dateBadge"><strong>10</strong><span>OCT</span></div>
+            <div>
+              <small>Saturday · From 6:00 PM onwards</small>
+              <h3>Choir Practice</h3>
+              <p>Choir practice for both Telugu and English worship.</p>
+              <div className="choirLanguages"><span>Telugu</span><span>English</span></div>
             </div>
           </article>
         </div>
@@ -133,16 +146,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="intro section">
-        <div className="sectionKicker">A harvest of blessings</div>
-        <h2>More than a festival.<br /><span>A celebration of togetherness.</span></h2>
-        <p>
-          Come together after worship for an afternoon of food, fellowship and fun.
-          Explore the stalls, enjoy the games, capture family memories and celebrate
-          the abundance of God’s blessings with our church family.
-        </p>
-      </section>
-
       <section id="stalls" className="section stallsSection">
         <div className="sectionHead">
           <div>
@@ -177,7 +180,7 @@ export default function Home() {
           <div className="sectionKicker light">The special one</div>
           <h2>The <em>Special Biryani</em> Counter</h2>
           <p>
-            Make sure you don't miss our special Harvest Biryani. Only 180 coupons
+            Make sure you don't miss our special Chicken Biryani. Only 180 coupons
             are being sold, on a first-come, first-served basis.
           </p>
           <div className="couponPrice"><span>₹200</span> per coupon</div>
@@ -205,9 +208,9 @@ export default function Home() {
 
         <div className="tambolaCard">
           <div>
-            <div className="sectionKicker">Try your luck</div>
+            <div className="sectionKicker">An enjoyable event</div>
             <h3>Tambola / Bingo</h3>
-            <p>Join the numbers game and make your Harvest Celebration even more exciting.</p>
+            <p>Enjoy the numbers game and make your Harvest Celebration even more memorable.</p>
           </div>
           <div className="ticketPrices">
             <div><strong>₹20</strong><span>Each Ticket</span></div>
