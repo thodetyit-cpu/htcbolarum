@@ -231,6 +231,23 @@ export default function Home() {
             <span>9849001813</span>
           </div>
         </div>
+
+        <div className="photoBoothCard">
+          <div className="photoBoothIntro">
+            <div className="sectionKicker">Capture it. Print it. Keep it.</div>
+            <h3>Photo Booth <span>with Instant Prints</span></h3>
+            <p>Take home a printed photo strip to remember your Harvest Celebration.</p>
+          </div>
+          <div className="photoBoothPrices">
+            <div><strong>₹150</strong><span>Regular Photo Strip · 2 × 6 in</span></div>
+            <div><strong>₹200</strong><span>Optional Fridge Magnet Photo Strip · 2 × 6 in</span></div>
+          </div>
+          <div className="photoBoothContact">
+            <small>Photo Booth Contact</small>
+            <strong>Mr. Joel Joseph</strong>
+            <a href="tel:9966728172">Call 9966728172</a>
+          </div>
+        </div>
       </section>
 
       <section id="auction" className="auction">
