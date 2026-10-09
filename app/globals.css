@@ -51,6 +51,9 @@ footer{background:#0b1d15;color:#fff;padding:30px max(34px,calc((100vw - 1112px)
   .visitCard{display:block}.visitNote{border-left:0;border-top:1px solid rgba(23,37,29,.18);margin-top:28px;padding:22px 0 0}
 }
 @media(max-width:520px){
+  .stallCard.committeeStall{padding-top:88px;min-height:270px}
+  .stallCard.committeeStall .committeeBadge{top:49px;left:22px;max-width:calc(100% - 44px);white-space:normal;line-height:1.3}
+  .stallCard.committeeStall h3{margin-top:0;max-width:100%;}
   .heroContent{padding-left:22px;padding-right:22px}.heroLogos{font-size:10px}.heroText{font-size:16px}.heroFacts{gap:0}.heroFacts div{padding-right:18px;margin-right:18px}.heroFacts strong{font-size:23px}.heroFacts span{font-size:8px}
   .stallGrid,.experienceGrid,.contactGrid{grid-template-columns:1fr}.dateCard{grid-template-columns:auto 1fr;padding:22px;gap:16px}.dateBadge{width:64px;height:76px}.dateBadge strong{font-size:31px}.dateCard h3{font-size:24px}.stallCard:nth-child(n){grid-column:span 1;min-height:215px}
   .biryaniArt{min-height:280px}.biryaniPhotoLabel{font-size:8px}.produceCounter{width:300px;right:-18%}.couponAlert{display:block}.couponAlert span{display:block;margin-top:7px}
