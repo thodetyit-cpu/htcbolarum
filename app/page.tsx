@@ -123,7 +123,7 @@ export default function Home() {
         </div>
         <div className="decorationInvite">
           <span>✦</span>
-          <p><strong>Everyone is welcome.</strong> Any member is warmly invited to come and participate in the church decoration for Harvest.</p>
+          <p><strong>Everyone is welcome.</strong> Join us to decorate the church, sing with the choir, or volunteer to help with stalls, parking and other arrangements. Every helping hand will make our Harvest Celebration more joyful!</p>
         </div>
       </section>
 
