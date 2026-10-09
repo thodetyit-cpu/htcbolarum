@@ -1,6 +1,6 @@
 export default function Home() {
   const stalls = [
-    { no: "01–06", title: "Special Chicken Biryani Counter", desc: "The much-awaited Chicken Biryani experience.", tone: "gold" },
+    { no: "01–06", title: "Special Chicken Biryani Counter", desc: "The much-awaited Chicken Biryani experience.", tone: "gold", committee: true },
     { no: "07–14", title: "Women’s Fellowship Stalls", desc: "Food, treats and fellowship from the Women’s Fellowship.", tone: "rose" },
     { no: "15–26", title: "Sunday School Stalls", desc: "Creative stalls, food and family fun.", tone: "green" },
     { no: "27–30", title: "Youth Fellowship Stalls", desc: "Games, activities and youthful energy.", tone: "blue" },
@@ -92,6 +92,10 @@ export default function Home() {
                 <span>Youth Secretary</span>
                 <strong>Ms. Sharon Grace GS</strong>
                 <span>Social Media Secretary</span>
+                <strong>Mrs. Mary Noel</strong>
+                <span>Women’s Fellowship Secretary · Decoration In Charge</span>
+                <strong>Mrs. Feeba Christina</strong>
+                <span>Sunday School Superintendent · Decoration In Charge</span>
               </div>
             </div>
           </article>
@@ -101,6 +105,10 @@ export default function Home() {
               <small>Saturday · From 6:00 PM onwards</small>
               <h3>Choir Practice</h3>
               <p>Combined choir practice for both English and Telugu Harvest songs.</p>
+              <div className="dateLeaders">
+                <strong>Prof. Gabriel GS</strong>
+                <span>Choir Practice In Charge</span>
+              </div>
               <div className="choirLanguages"><span>English Songs</span><span>Telugu Songs</span></div>
             </div>
           </article>
@@ -156,8 +164,9 @@ export default function Home() {
         </div>
         <div className="stallGrid">
           {stalls.map((stall) => (
-            <article className={`stallCard ${stall.tone}`} key={stall.no}>
+            <article className={`stallCard ${stall.tone} ${stall.committee ? "committeeStall" : ""}`} key={stall.no}>
               <div className="stallNo">STALL {stall.no}</div>
+              {stall.committee && <div className="committeeBadge">✦ COMMITTEE STALL</div>}
               <h3>{stall.title}</h3>
               <p>{stall.desc}</p>
               <span className="arrow">↗</span>
